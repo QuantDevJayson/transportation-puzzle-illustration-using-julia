@@ -30,7 +30,7 @@ $$
 $$
 
 $$
-\sum_i=1}^{N} x_{ij} = 1, \quad \forall j
+\sum_{i=1}^{N} x_{ij} = 1, \quad \forall j
 $$
 
    Each location must be visited exactly once.
