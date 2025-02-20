@@ -19,40 +19,41 @@ $$
 
 where:
 
-- $$\( d_{ij} \)$$ is the distance (or time cost) from location $$\( i \)$$ to $$\( j \).$$
-- $$\( w_i \)$$ represents waiting time at location $$\( i \)$$.
+- \( d_{ij} \) is the distance (or time cost) from location \( i \) to \( j \).
+- \( w_i \) represents waiting time at location \( i \).
 
+ **Route constraints (Traveling Salesman Problem - TSP)**:
 
-1. **Route constraints (Traveling Salesman Problem - TSP)**:
-
-   $$
+  \[
    \sum_{j=1}^{N} x_{ij} = 1, \quad \forall i
-   $$
+\]
 
-   $$
+\[
    \sum_{i=1}^{N} x_{ij} = 1, \quad \forall j
-   $$
+\]
+
 
    Each location must be visited exactly once.
 
-2. **Time constraints**:
+### Time Constraints
 
-   $$
-   t_i + w_i \geq t_i^{\text{early}}, \quad \forall i
-   $$
+$$
+t_i + w_i \geq t_i^{\text{early}}, \quad \forall i
+$$
 
-   The truck cannot deliver before the store opens.
+The truck cannot deliver before the store opens.
 
-3. **Subtour elimination constraint (Miller-Tucker-Zemlin)**:
+### Subtour Elimination Constraint (Miller-Tucker-Zemlin)
 
-   $$
-   t_j \geq t_i + d_{ij} x_{ij}, \quad \forall i, j
-   $$
+$$
+t_j \geq t_i + d_{ij} x_{ij}, \quad \forall i, j
+$$
 
-   Ensuring logical sequencing of visits.
+Ensuring logical sequencing of visits.
 
-4. **Non-negativity**:
+### Non-Negativity
 
-   $$
-   w_i \geq 0
-   $$
+$$
+w_i \geq 0
+$$
+
